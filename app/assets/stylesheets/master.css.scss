@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 
 .clear {
   clear: both;
@@ -43,10 +44,21 @@ hr {
   color: black;
   font-size: 25px;
   border-bottom: 1px solid #dfdfdf;
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
 }
 
 header {
   border-top: 9px solid #222222;
 }
 
+h1 {
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: 'indie_flowerregular', cursive;
+}
 
