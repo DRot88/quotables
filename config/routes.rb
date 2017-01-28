@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root 'quotes#index'
 
+  resources :quotes
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
