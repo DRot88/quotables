@@ -21,12 +21,13 @@
         </div>
       <% end %>
     </div>
-    <div class="col-xs-4 slogan">
+    <div class="col-sm-4 hidden-xs slogan">
       Splurting out the greatest quotes from the movies we all love!
     </div>
-    <div class="col-xs-5 links">
+    <div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-5 links">
         <!-- Button trigger modal -->
       <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+      &nbsp;&nbsp;
       <%= link_to 'About', about_path %>
     </div>
   </header>
@@ -41,8 +42,9 @@
         </div>
         <%= simple_form_for Quote.new do |f| %>
         <div class="modal-body">
-          <%= f.input :saying %>
-          <%= f.input :movie %>
+          <%= f.input :saying, label: "What is the movie quote you would like to add?", placeholder: "Say 'Hello' to my little friend!" %>
+          <br />
+          <%= f.input :movie, label: "What movie is this quote from?", placeholder: "Scarface" %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
@@ -69,10 +71,10 @@
 
 <div class="footer">
   <div class="container">
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6">
       <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
     </div>
-    <div class="col-xs-6 footer-blurb">
+    <div class="col-xs-12 col-sm-6 footer-blurb">
       Proudly hacked in Astoria, NY by <a href="https://www.linkedin.com/in/daniel-rotenberg-20b77835">Daniel Rotenberg</a><br />
       Want to build your own Quotables Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
     </div>
